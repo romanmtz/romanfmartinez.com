@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let vault_link = document.getElementById("vault_button");
 
 
-    const SWITCH_BUFFER = 600;
+    const SWITCH_BUFFER = 300;
 
     function toggleFix() {
         let aboutmeRect = aboutme.getBoundingClientRect();

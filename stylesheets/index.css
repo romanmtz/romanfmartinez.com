@@ -1,321 +1,282 @@
 /* Global Styles */
 *,
 html {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  text-decoration: none;
-  max-width: 100%;
-  overflow-x: hidden;
-  scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    max-width: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 :root {
-  --webkit-font-smoothing: antialiased;
-  --background: rgb(0, 0, 0);
-  --text: white;
-  --ab-background: rgb(27, 17, 33);
-  --pr-background: rgb(17, 33, 30);
-  --va-background: rgb(61, 0, 0);
+    --background: black;
+    --text: white;
+    --ab-background: rgb(27, 17, 33);
+    --pr-background: rgb(17, 33, 30);
+    --va-background: rgb(61, 0, 0);
 }
 
 .lightmode {
-  --background: white;
-  --text: black;
-  --ab-background: rgb(177, 152, 192);
-  --pr-background: rgb(148, 200, 191);
-  --va-background: rgb(217, 173, 173);
-  text-shadow: -1px 0px 1px var(--text), 0px 0px 1px rgb(160, 0, 0);
+    --background: white;
+    --text: black;
+    --ab-background: rgb(177, 152, 192);
+    --pr-background: rgb(148, 200, 191);
+    --va-background: rgb(217, 173, 173);
+    text-shadow: -1px 0px 1px var(--text), 0px 0px 1px rgb(160, 0, 0) ;
+
+
+
 }
 
 body {
-  font-family: 'Times New Roman Condensed Bold';
-  color: var(--text);
-  text-shadow: -1px 0px 1px var(--text), 0px 0px 3px rgb(160, 0, 0);
-  background-color: var(--background);
-  transition: background-color 0.1s, color 0.1s;
+    font-family: "Times New Roman Condensed Bold";
+    color: var(--text);
+    text-shadow: -1px 0px 1px var(--text), 0px 0px 3px rgb(160, 0, 0) ;
+    background-color: var(--background);
+    transition: background-color .1s, color .1s;
+
 }
 
-#settings ul {
-  position: absolute;
-  top: 20px;
-  left: 20px;
+#settings ul{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+   
+    
 }
 
-#settings Button {
-  width: 15px;
-  height: 15px;
-  margin-right: 5px;
-  border: none;
-  background-color: var(--text);
-  color: var(--background);
+#settings Button{
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+    border: none;
+    background-color: var(--text);
+    color: var(--background)
+    
 }
 
-#settings input[type='checkbox'] {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  width: 15px;
-  height: 15px;
-  margin-right: 5px;
-  border: 2px solid var(--text);
-  background-color: var(--background);
-  cursor: pointer;
+#settings input[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+    border: 2px solid var(--text);
+    background-color: var(--background);
+    cursor: pointer;
 }
 
-#settings input[type='checkbox']:checked {
-  background-color: var(--text);
+#settings input[type="checkbox"]:checked {
+    background-color: var(--text);
 }
 
-#settings li {
-  padding: 20px;
+
+
+#settings li{
+    padding: 20px;
 }
 
-#nav li {
-  float: left;
-  padding: 25px;
+
+#nav {
+    transition: background-color 2s, color 20s;
+
+}
+
+#nav li{
+    float: left;
+    padding: 25px;
 }
 
 #nav:not(.fixed-navbar) {
-  position: absolute;
-  width: fit-content;
-  margin: 0 auto;
-  left: 0;
-  right: 0;
-  top: 55vh;
+    position: absolute;
+    width: fit-content;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 55vh;
 }
 
-hr {
-  border-color: var(--text);
-}
+
 
 .underlined-link {
-  border-bottom: 1px solid var(--text);
-  text-decoration: none;
+    
+
+    border-bottom: 1px solid var(--text);
+    text-decoration: none;
+
 }
 
+
 .fixed-navbar {
-  background-color: var(--background);
-  position: fixed;
-  top: 0;
-  right: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
 }
 
 .hero {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  box-shadow: 0px 10px 10px rgba(5, 5, 5, 0.539);
-  position: relative;
-  justify-content: center;
-  align-items: center;
-  z-index: 4;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    box-shadow: 0px 10px 10px rgba(5, 5, 5, 0.539);
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    z-index: 4;
 }
 
-.hero h1 {
-  font-size: 80px;
-  padding-bottom: 50px;
-  text-align: center;
 
-  transform: scale(0.79, 1);
+.hero h1 {
+    font-size: 80px;
+    padding-bottom: 50px;
+    transform: scale(0.79, 1);
 }
 
 .aboutme,
 .projects,
 .vault {
-  padding-block: 80px;
-  padding-inline: 15%;
+
+    padding-block: 80px;
+    padding-inline: 15%;
 }
 
 .aboutme {
-  background-color: var(--ab-background);
-  box-shadow: 0px 10px 10px rgba(5, 5, 5, 0.539);
-  position: relative;
-  z-index: 3;
+    background-color: var(--ab-background);
+    box-shadow: 0px 10px 10px rgba(5, 5, 5, 0.539);
+    position: relative;
+    z-index: 3;
 }
 
 h1 {
-  font-size: 40px;
-}
-h2 {
-  font-size: 25px;
+    font-size: 40px;
+
 }
 
-.vault,
-.vault a {
-  font-size: 20px;
-}
-
-.vault li {
-  border-left: solid 3px var(--text);
-  margin-block: 20px;
-}
-
-.vault span {
-  margin-inline: 30px;
-}
-.vault a {
-  margin-left: 10px;
-}
-.column {
-  width: 50%;
-  float: left;
-}
-
+.vault li,
 .projects li {
-  margin-bottom: 80px;
+    margin-bottom: 80px;
 }
 
 .aboutme p,
 hr {
-  margin-bottom: 30px;
-  font-size: 25px;
+    margin-bottom: 30px;
+    font-size: 25px;
 }
 
 .projects {
-  font-size: 25px;
-  background-color: var(--pr-background);
-  box-shadow: 0px 10px 10px rgba(5, 5, 5, 0.539);
-  position: relative;
-  z-index: 2;
+    
+    font-size: 25px;
+    background-color: var(--pr-background);
+    box-shadow: 0px 10px 10px rgba(5, 5, 5, 0.539);
+    position: relative;
+    z-index: 2;
 }
 
-.projects a {
-  font-size: 25px;
+.projects a{
+
+    font-size: 25px;
+
 }
 
 .projects span,
 .vault span {
-  float: right;
+    float: right;
 }
 
 .projects p {
-  font-size: 25px;
-  margin: 30px 100px 0 0;
+    font-size: 25px;
+    margin: 30px 100px 0 0;
 }
 
 .vault {
-  background-color: var(--va-background);
+
+    background-color: var(--va-background);
+
 }
+
+
 
 .noise,
 .crt::before,
 .crt::after {
-  position: fixed;
-  z-index: 999;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  content: ' ';
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    content: " ";
 }
-
-.no-scroll body::-webkit-scrollbar{
-  overflow: hidden;
-}
-/* total width */
-body::-webkit-scrollbar {
-  background-color: var(--background);
-  width: 8px;
-}
-
-/* background of the scrollbar except button or resizer */
-body::-webkit-scrollbar-track {
-  background-color: var(--background);
-}
-
-/* scrollbar itself */
-body::-webkit-scrollbar-thumb {
-  background-color: var(--text);
- 
-}
-
-/* set button(top and bottom of the scrollbar) */
-body::-webkit-scrollbar-button {
-  display:none;
-}
-
-
-
-.doc-embed-wrapper{
-  
-  width: 800px;
-  display: block;
-  margin: auto;
-  text-align: center;
-}
-
-
-.doc-embed{
-  
-  margin-block: 1vh;
-  width: 100%;
-  height: 97vh;
-}
-
 
 .noise {
-  background-image: url('../assets/noise.png');
-  background-size: 200px 200px;
-  background-repeat: repeat;
-  opacity: 0.11;
-  animation: grain 1s steps(10) infinite;
+    background-image: url('../assets/noise.png');
+    background-size: 200px 200px;
+    background-repeat: repeat;
+    opacity: 0.15;
+    animation: grain 1s steps(10) infinite;
 }
 
 .crt::before {
-  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%),
-    linear-gradient(
-      90deg,
-      rgba(255, 0, 0, 0.06),
-      rgba(0, 255, 0, 0.02),
-      rgba(0, 0, 255, 0.06)
-    );
-  background-size: 100% 1.5px, 2.5px 100%;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+    background-size: 100% 1.5px, 2.5px 100%;
 }
 
 .crt::after {
-  background: rgba(18, 16, 16, 0.1);
-  animation: flicker 0.5s infinite;
-  z-index: 2;
+    background: rgba(18, 16, 16, 0.1);
+    animation: flicker 0.5s infinite;
+    z-index: 2;
 }
 
-a {
-  color: var(--text);
-  font-size: 17px;
-  transition: text-decoration 300ms ease;
+a{
+    color: var(--text);
+    font-size: 17px;
+    transition: text-decoration 300ms ease;
+
 }
+
 
 a:not(.underlined-link) {
-  text-decoration: none;
+
+    text-decoration: none;
+    
+
 }
 
-a:hover {
-  text-decoration: underline;
-  text-decoration-color: var(--text);
+a:hover{
+
+text-decoration: underline;
+text-decoration-color: var(--text);
+
+
 }
+
 
 /* Keyframes */
 @keyframes grain {
-  0% {
-    background-position: 0 0;
-  }
+    0% {
+        background-position: 0 0;
+    }
 
-  100% {
-    background-position: 200px 200px;
-  }
+    100% {
+        background-position: 200px 200px;
+    }
 }
 
 @keyframes flicker {
-  0% {
-    opacity: 0.4;
-  }
+    0% {
+        opacity: 0.4;
+    }
 
-  50% {
-    opacity: 0.44;
-  }
+    50%{
+        opacity: 0.44
+    }
 
-  100% {
-    opacity: 0.5;
-  }
+    100%{
+        opacity: 0.5;
+    }
+
+   
 }
