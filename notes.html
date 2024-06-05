@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roman's Portfolio</title>
+    <link rel="stylesheet" href="./stylesheets/index.css">
+    <script src="./index.js"></script>
+    <script src="./lightmode.js"></script>
+</head>
+
+<body>
+   
+       
+        <div style="position: fixed ">
+            <ul style="list-style-type:circle">
+                <li>    <a onclick="changeNotes('https://docs.google.com/document/d/e/2PACX-1vQaNjHim4nJu9gLRHEAVUk8d_tv0JzBOOA6Z6dVSeNaIWBTpkUIgYyXQmXpqk0Q_oiMfG8pbaplOu3Q/pub?embedded=true')">Introduction To JavaScript</a>
+                </li>
+                <li>    <a onclick="changeNotes('https://docs.google.com/document/d/e/2PACX-1vSbDwiLDVPEh9vlZ4j_p-U3WHJ1LbJ5JypjBqUR-T7AAkOt-0gBlKo8pSTBwpbQt4mbzXdwg7zZiUvG/pub?embedded=true')">JavaScript Fundamentals<a>
+                </li>
+                <li>    <a onclick="changeNotes('https://docs.google.com/document/d/e/2PACX-1vTlz1R4N7TILfnW9lOOJg7ze_vsS9s2C6G0zq2jH4vsYWFlILpZv8i7UJONSQzs8RvG9HhiyUTIf-dM/pub?embedded=true')">HTML & CSS</a>
+                </li>
+                <li>    <a onclick="changeNotes('https://docs.google.com/document/d/e/2PACX-1vRAbnZuZF6g--GhjPi5c4cLX1onis9EHqrDPxiUbOqmC5SZD_9xK2Enk-xSi8v1pRVOyj-v_i0kh_tE/pub?embedded=true')">Git & GitHub</a>
+
+                </li>
+            </ul>
+        </div>
+        
+    </div>
+
+
+
+    <div class="doc-embed-wrapper">
+
+        
+        <iframe id="doc-embed" allow="autoplay" class="doc-embed"></iframe>
+      
+
+    </div>
+
+
+    <script>
+
+
+        function changeNotes(loc) {
+          document.getElementById('doc-embed').src = loc;
+        }
+    </script>
+   
+    <div id="noise"></div>
+    <div id="crt"></div>
+
+</body>
+
+</html>
