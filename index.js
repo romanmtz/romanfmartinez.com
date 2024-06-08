@@ -43,6 +43,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     }
 
+    
+
 
     window.onscroll = () => {
         toggleFix();

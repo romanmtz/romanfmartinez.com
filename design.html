@@ -15,13 +15,10 @@
        
         <div class="notenav">
             <ul>
-                <li>    <a onclick="changeNotes('2PACX-1vQaNjHim4nJu9gLRHEAVUk8d_tv0JzBOOA6Z6dVSeNaIWBTpkUIgYyXQmXpqk0Q_oiMfG8pbaplOu3Q')">Introduction To JavaScript</a>
+                <li>    <a onclick="changeNotes('2PACX-1vQcQYKsqzLcOeKM2ggLuRaZWQlStLUXI0uC7gKpky-G3xeRx0sI8SF_P2GtfiozLbzo_gIQGks_lkBt')">Roman's Portfolio</a>
                 </li>
-                <li>    <a onclick="changeNotes('2PACX-1vSbDwiLDVPEh9vlZ4j_p-U3WHJ1LbJ5JypjBqUR-T7AAkOt-0gBlKo8pSTBwpbQt4mbzXdwg7zZiUvG')">JavaScript Fundamentals<a>
-                </li>
-                <li>    <a onclick="changeNotes('2PACX-1vTlz1R4N7TILfnW9lOOJg7ze_vsS9s2C6G0zq2jH4vsYWFlILpZv8i7UJONSQzs8RvG9HhiyUTIf-dM')">HTML & CSS</a>
-                </li>
-                <li>    <a onclick="changeNotes('2PACX-1vRAbnZuZF6g--GhjPi5c4cLX1onis9EHqrDPxiUbOqmC5SZD_9xK2Enk-xSi8v1pRVOyj-v_i0kh_tE')">Git & GitHub</a>
+
+
                 </li>
             </ul>
         </div>
@@ -40,8 +37,7 @@
     </div>
 
     <a id="to-main" href="./index.html">Main Page</a>
-    <a id="to-notes-design" href="./design.html?designid=2PACX-1vQaNjHim4nJu9gLRHEAVUk8d_tv0JzBOOA6Z6dVSeNaIWBTpkUIgYyXQmXpqk0Q_oiMfG8pbaplOu3Q">Notes</a>
-
+    <a id="to-notes-design" href="./notes.html?noteid=2PACX-1vQcQYKsqzLcOeKM2ggLuRaZWQlStLUXI0uC7gKpky-G3xeRx0sI8SF_P2GtfiozLbzo_gIQGks_lkBt">Designs</a>
 
 
     <script>
@@ -50,7 +46,7 @@
 
         function changeNotes(paramVal) {
             var url = window.location.href;
-            var param = 'noteid';
+            var param = 'designid';
             iframe.src = 'https://docs.google.com/document/d/e/' + paramVal + '/pub?embedded=true';
             var newAdditionalURL = "";
             var tempArray = url.split("?");
@@ -68,10 +64,12 @@
                 }
             }
 
-            var noteid= temp + "" + param + "=" + paramVal;
-            window.history.replaceState('', '', baseURL + "?" + newAdditionalURL + noteid);
+            var designid = temp + "" + param + "=" + paramVal;
+            window.history.replaceState('', '', baseURL + "?" + newAdditionalURL + designid);
             
         }
+
+        
             
         function getParameterByName(name) {
             var url = window.location.href;
@@ -83,7 +81,8 @@
             return decodeURIComponent(results[2].replace(/\+/g, ' '));
         }
 
-        iframe.src = 'https://docs.google.com/document/d/e/' + getParameterByName('noteid') + '/pub?embedded=true'
+
+        iframe.src = 'https://docs.google.com/document/d/e/' + getParameterByName('designid') + '/pub?embedded=true';
    
     </script>
    

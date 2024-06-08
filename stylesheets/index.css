@@ -85,6 +85,18 @@ body {
   top: 55vh;
 }
 
+#to-main, #to-notes-design{
+  position: fixed;
+  bottom: 0;
+  background-color: var(--background);
+  opacity: .90;
+  padding: 10px;
+}
+
+#to-notes-design{
+  right: 0;
+}
+
 hr {
   border-color: var(--text);
 }
@@ -249,9 +261,17 @@ body::-webkit-scrollbar-button {
 
 .doc-embed{
   
-  margin-block: 1vh;
+  margin-block: 2vh;
   width: 100%;
-  height: 97vh;
+  height: 95vh;
+}
+
+.notenav{
+  cursor: pointer;
+  position: fixed;
+  padding: 10px;
+  background-color: var(--background);
+  opacity: .90;
 }
 
 
