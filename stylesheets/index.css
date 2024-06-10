@@ -17,6 +17,10 @@ html {
   --ab-background: rgb(27, 17, 33);
   --pr-background: rgb(17, 33, 30);
   --va-background: rgb(61, 0, 0);
+  --shadow-color: rgb(171, 60, 60);
+  --box-shadow-intensity: rgba(0, 0, 0, 0.495);
+
+
 }
 
 .lightmode {
@@ -25,13 +29,13 @@ html {
   --ab-background: rgb(177, 152, 192);
   --pr-background: rgb(148, 200, 191);
   --va-background: rgb(217, 173, 173);
-  text-shadow: -1px 0px 1px var(--text), 0px 0px 1px rgb(160, 0, 0);
+  --shadow-color: rgba(160, 0, 0, 0.392);
+  --box-shadow-intensity: rgba(5, 5, 5, 0.539);
 }
 
 body {
   font-family: 'Times New Roman Condensed Bold';
   color: var(--text);
-  text-shadow: -1px 0px 1px var(--text), 0px 0px 3px rgb(160, 0, 0);
   background-color: var(--background);
   transition: background-color 0.1s, color 0.1s;
 }
@@ -50,6 +54,7 @@ body {
   background-color: var(--text);
   color: var(--background);
 }
+
 
 #settings input[type='checkbox'] {
   -webkit-appearance: none;
@@ -70,6 +75,13 @@ body {
 #settings li {
   padding: 20px;
 }
+#nav{
+  border-radius: 0 0 0 5px;
+  z-index: 2;
+  box-shadow: 0px 0px 10px 5px  var(--box-shadow-intensity);
+
+
+}
 
 #nav li {
   float: left;
@@ -83,6 +95,7 @@ body {
   left: 0;
   right: 0;
   top: 55vh;
+  box-shadow: none;
 }
 
 #to-main, #to-notes-design{
@@ -97,6 +110,12 @@ body {
   right: 0;
 }
 
+.in-focus{
+  box-shadow: 0px 0px 10px 5px  var(--box-shadow-intensity);
+  text-shadow: -1px 0px 1px var(--text), 0px 0px 3px var(--shadow-color);
+  z-index: 1;
+}
+
 hr {
   border-color: var(--text);
 }
@@ -104,6 +123,8 @@ hr {
 .underlined-link {
   border-bottom: 1px solid var(--text);
   text-decoration: none;
+  text-shadow: -1px 0px 1px var(--text), 0px 0px 3px var(--shadow-color);
+
 }
 
 .fixed-navbar {
@@ -117,33 +138,32 @@ hr {
   width: 100vw;
   height: 100vh;
   display: flex;
-  box-shadow: 0px 10px 10px rgba(5, 5, 5, 0.539);
   position: relative;
   justify-content: center;
   align-items: center;
-  z-index: 4;
 }
 
 .hero h1 {
   font-size: 80px;
   padding-bottom: 50px;
   text-align: center;
-
   transform: scale(0.79, 1);
 }
+
 
 .aboutme,
 .projects,
 .vault {
+  position: relative;
+  transition: text-shadow .5s;
+  transition: box-shadow .5s;
   padding-block: 80px;
   padding-inline: 15%;
 }
 
 .aboutme {
   background-color: var(--ab-background);
-  box-shadow: 0px 10px 10px rgba(5, 5, 5, 0.539);
   position: relative;
-  z-index: 3;
 }
 
 h1 {
@@ -155,18 +175,22 @@ h2 {
 
 .vault,
 .vault a {
+  
   font-size: 20px;
 }
 
 .vault li {
   border-left: solid 3px var(--text);
-  margin-block: 20px;
+  margin-top: 20px;
 }
 
-.vault span {
-  margin-inline: 30px;
+.vault h2{
+  margin-top: 20px;
 }
+
 .vault a {
+  font-size: 15px;
+
   margin-left: 10px;
 }
 .column {
@@ -175,35 +199,34 @@ h2 {
 }
 
 .projects li {
-  margin-bottom: 80px;
+  margin-top: 25px;
 }
 
-.aboutme p,
-hr {
-  margin-bottom: 30px;
+.aboutme p{
+  margin-top: 25px;
   font-size: 25px;
 }
 
 .projects {
   font-size: 25px;
   background-color: var(--pr-background);
-  box-shadow: 0px 10px 10px rgba(5, 5, 5, 0.539);
-  position: relative;
-  z-index: 2;
 }
 
 .projects a {
   font-size: 25px;
+
 }
 
 .projects span,
 .vault span {
   float: right;
+  font-size: 16px;
 }
 
 .projects p {
-  font-size: 25px;
-  margin: 30px 100px 0 0;
+  font-size: 20px;
+  margin-top: 30px;
+  width: 60%;
 }
 
 .vault {
@@ -221,11 +244,10 @@ hr {
   height: 100%;
   pointer-events: none;
   content: ' ';
+  opacity: .5;
 }
 
-.no-scroll body::-webkit-scrollbar{
-  overflow: hidden;
-}
+
 /* total width */
 body::-webkit-scrollbar {
   background-color: var(--background);
@@ -267,7 +289,6 @@ body::-webkit-scrollbar-button {
 }
 
 .notenav{
-  cursor: pointer;
   position: fixed;
   padding: 10px;
   background-color: var(--background);
@@ -297,7 +318,7 @@ body::-webkit-scrollbar-button {
 .crt::after {
   background: rgba(18, 16, 16, 0.1);
   animation: flicker 0.5s infinite;
-  z-index: 2;
+  z-index: 999;
 }
 
 a {
@@ -312,8 +333,75 @@ a:not(.underlined-link) {
 
 a:hover {
   text-decoration: underline;
+  cursor: pointer;
   text-decoration-color: var(--text);
 }
+button:hover{
+  cursor: pointer;
+}
+.secret{
+  display: hidden;
+}
+
+
+@media only screen and (min-resolution: 400dpi) and (max-resolution: 1000dpi) {
+
+ 
+  
+  .secret{
+    position: fixed;
+    display: flex;
+    z-index: 1000;
+    width: 100vw;
+    height:100vh;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background);
+    color: var(--text);
+    top: 0;
+    font-size: 10vh;
+    user-select: none;
+
+  }
+  .secret span{
+    transform: scale(0.79, 1);
+
+  }
+  body::-webkit-scrollbar {
+    display: none;
+  }
+  
+} 
+
+@media (max-height: 200px) {
+
+  .secret{
+    position: fixed;
+    display: flex;
+    z-index: 1000;
+    width: 100vw;
+    height:100vh;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background);
+    color: var(--text);
+    top: 0;
+    font-size: 10vw;
+    user-select: none;
+
+  }
+  .secret span{
+    transform: scale(0.79, 1);
+
+  }
+  body::-webkit-scrollbar {
+    display: none;
+  }
+  
+} 
+
 
 /* Keyframes */
 @keyframes grain {
