@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function checkVisible(elm) {
-    threshold = 400;
+    threshold = 380;
     mode = 'visible';
 
     var rect = elm.getBoundingClientRect();
