@@ -9,6 +9,9 @@ document.addEventListener('DOMContentLoaded', function () {
   let projects_link = document.getElementById('projects_button');
   let vault_link = document.getElementById('vault_button');
 
+  let settingsButton = document.getElementById('settings_button');
+  let settingsModal = document.getElementById('settings-modal')
+
   const SWITCH_BUFFER = 300;
 
   function toggleFix() {
@@ -55,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function checkVisible(elm) {
-    threshold = 380;
+    threshold = (window.innerHeight/2.5);
     mode = 'visible';
 
     var rect = elm.getBoundingClientRect();
@@ -73,6 +76,18 @@ document.addEventListener('DOMContentLoaded', function () {
       : !above && !below;
   }
 
+  settingsButton.onclick = () =>{
+    settingsModal.showModal();
+  }
+
+settingsModal.onclick = (e) =>{
+  if(e.target == settingsModal)
+  settingsModal.close();
+}
+  
+window.onclick = (event) => {
+  console.log(event.target);
+}
   window.onscroll = () => {
     toggleFix();
     sectionFocus();
