@@ -5,18 +5,18 @@ document.addEventListener('DOMContentLoaded', function () {
   let projects = document.getElementById('projects');
   let vault = document.getElementById('vault');
 
-  let aboutme_link = document.getElementById('aboutme_button');
-  let projects_link = document.getElementById('projects_button');
-  let vault_link = document.getElementById('vault_button');
+  let aboutme_link = document.getElementById('aboutme-button');
+  let projects_link = document.getElementById('projects-button');
+  let vault_link = document.getElementById('vault-button');
 
-  let settingsButton = document.getElementById('settings_button');
+  let settingsButton = document.getElementById('settings-button');
   let settingsModal = document.getElementById('settings-modal')
 
   const SWITCH_BUFFER = 300;
 
   function toggleFix() {
 
-    if (!checkVisible(hero)) {
+    if (!checkVisible(hero, window.innerHeight/2.5)) {
       navbar.classList.add('fixed-navbar');
     } else {
       navbar.classList.remove('fixed-navbar');
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function sectionFocus() {
     const sections = [
-        { section: vault, link: vault_link, precedence: 4 },
+        { section: vault, link: vault_link, precedence: 4, },
         { section: aboutme, link: aboutme_link, precedence: 3 },
         { section: projects, link: projects_link, precedence: 2 },
         { section: hero, link: null, precedence: 1 }
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function () {
       let highestPrecedence = -Infinity;
     
       for (const { section, link, precedence } of sections) {
-        if (checkVisible(section)) {
+        if (checkVisible(section, window.innerHeight/3)) {
           if (precedence > highestPrecedence) {
             visibleSection = { section, link };
             highestPrecedence = precedence;
@@ -57,8 +57,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   }
 
-  function checkVisible(elm) {
-    threshold = (window.innerHeight/2.5);
+  function checkVisible(elm, threshold) {
     mode = 'visible';
 
     var rect = elm.getBoundingClientRect();
@@ -85,9 +84,6 @@ settingsModal.onclick = (e) =>{
   settingsModal.close();
 }
   
-window.onclick = (event) => {
-  console.log(event.target);
-}
   window.onscroll = () => {
     toggleFix();
     sectionFocus();

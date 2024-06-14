@@ -4,40 +4,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Roman's Portfolio</title>
+    <title>Roman's Designs</title>
+    <link rel="icon" href="./assets/favicon.ico">
     <link rel="stylesheet" href="./stylesheets/index.css">
-    <script src="./scripts/index.js"></script>
-    <script src="./scripts/lightmode.js"></script>
+
 </head>
 
 <body>
-   
-       
-        <div class="notenav">
-            <ul>
-                <li>    <a onclick="changeNotes('2PACX-1vQcQYKsqzLcOeKM2ggLuRaZWQlStLUXI0uC7gKpky-G3xeRx0sI8SF_P2GtfiozLbzo_gIQGks_lkBt')">Roman's Portfolio</a>
-                </li>
 
 
-                </li>
-            </ul>
-        </div>
-        
+    <div class="notenav">
+        <ul>
+            <li> <a
+                    onclick="changeNotes('2PACX-1vQcQYKsqzLcOeKM2ggLuRaZWQlStLUXI0uC7gKpky-G3xeRx0sI8SF_P2GtfiozLbzo_gIQGks_lkBt')">Roman's
+                    Portfolio</a>
+            </li>
+
+
+            </li>
+        </ul>
     </div>
 
-   
+    </div>
+
+
 
 
     <div class="doc-embed-wrapper">
 
-        
+
         <iframe id="doc-embed" src="" allow="autoplay" class="doc-embed"></iframe>
-      
+
 
     </div>
 
     <a id="to-main" href="./index.html">To Main Page</a>
-    <a id="to-notes-design" href="./notes.html?noteid=2PACX-1vQaNjHim4nJu9gLRHEAVUk8d_tv0JzBOOA6Z6dVSeNaIWBTpkUIgYyXQmXpqk0Q_oiMfG8pbaplOu3Q">To Notes</a>
+    <a id="to-notes-design"
+        href="./notes.html?noteid=2PACX-1vQaNjHim4nJu9gLRHEAVUk8d_tv0JzBOOA6Z6dVSeNaIWBTpkUIgYyXQmXpqk0Q_oiMfG8pbaplOu3Q">To
+        Notes</a>
 
 
     <script>
@@ -56,8 +60,8 @@
 
             if (additionalURL) {
                 tempArray = additionalURL.split("&");
-                for (var i=0; i<tempArray.length; i++){
-                    if(tempArray[i].split('=')[0] != param){
+                for (var i = 0; i < tempArray.length; i++) {
+                    if (tempArray[i].split('=')[0] != param) {
                         newAdditionalURL += temp + tempArray[i];
                         temp = "&";
                     }
@@ -66,11 +70,11 @@
 
             var designid = temp + "" + param + "=" + paramVal;
             window.history.replaceState('', '', baseURL + "?" + newAdditionalURL + designid);
-            
+
         }
 
-        
-            
+
+
         function getParameterByName(name) {
             var url = window.location.href;
             name = name.replace(/[\[\]]/g, '\\$&');
@@ -83,9 +87,9 @@
 
 
         iframe.src = 'https://docs.google.com/document/d/e/' + getParameterByName('designid') + '/pub?embedded=true';
-   
+
     </script>
-   
+
     <div id="noise"></div>
     <div id="crt"></div>
     <div class="secret"><span>You are not alone.</span></div>

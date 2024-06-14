@@ -4,127 +4,155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Roman's Portfolio</title>
+    <title>Roman F. Martinez</title>
     <link rel="stylesheet" href="./stylesheets/index.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    <link rel="icon" href="./assets/favicon.ico">
+    <script src="https://kit.fontawesome.com/0434762a36.js" crossorigin="anonymous"></script>
     <script src="./scripts/index.js"></script>
     <script src="./scripts/lightmode.js"></script>
 </head>
 
 <body>
+    <div id="settings-button"><a class="fa fa-bars"></a></div>
+    <div id="nav">
+        <ul>
+            <li><a id="aboutme-button" href="#aboutme">about me</a></li>
+            <li><a id="projects-button" href="#projects">projects</a></li>
+            <li><a id="vault-button" href="#vault">vault</a></li>
+        </ul>
+    </div>
+
+    <div id="contact">
+        <ul>
+            <li><a href="https://github.com/romanmtz" class="fa fa-github"> </a></li>
+            <li><a href="https://www.linkedin.com/in/romanfmartinez/" class="fa fa-linkedin"> </a></li>
+            <li><a href="mailto:romanmartinez101@gmail.com" class="fa fa-envelope"> </a></li>
+        </ul>
+    </div>
+
+    <dialog id="settings-modal">
+
+        <ul>
+            <li>settings:</li>
+            <li><Button id="light-mode-toggle" class="light-mode-toggle"></Button>display-mode</li>
+            <li><input type="checkbox" id="film-grain-toggle" class="film-grain-toggle"></input>film-grain</li>
+            <li><input type="checkbox" id="crt-filter-toggle" class="crt-filter-toggle"></input>CRT-filter</li>
+        </ul>
+
+    </dialog>
+
     <div class="hero" id="hero">
-        <h1>Roman's Portfolio</h1>
-
-        <li><a id="settings_button" class="fa fa-bars"></a></li>
-
-        <div id="contact">
-            <ul>    
-                
-
-                <li><a href="https://github.com/romanmtz" class="fa fa-github"> </a></li>
-                <li><a href="https://www.linkedin.com/in/romanfmartinez/" class="fa fa-linkedin"> </a></li>
-                <li><a href="mailto:romanmartinez101@gmail.com" class="fa fa-envelope"> </a></li>
-            
-            </ul>
-        </div>
-        
-       
-
-        <dialog id="settings-modal">
-        
-            <ul >
-                <li>settings:</h3></li>
-                <li><Button id="light-mode-toggle" class="light-mode-toggle"></Button>display-mode</li>
-                <li><input type="checkbox" id="film-grain-toggle" class="film-grain-toggle"></input>film-grain</li>
-                <li><input type="checkbox" id="crt-filter-toggle" class="crt-filter-toggle"></input>CRT-filter</li>
-            </ul>
-           
-        </dialog>
-       
-        <div id="nav">
-            <ul>
-                
-                <li><a id="aboutme_button" href="#aboutme">about me</a></li>
-                <li><a id="projects_button" href="#projects">projects</a></li>
-                <li><a id="vault_button" href="#vault">vault</a></li>
-                
-
-            </ul>
-        </div>
+        <span>Roman F. Martinez</span>
     </div>
 
     <div class="aboutme" id="aboutme">
 
-        <h1>About Me</h1>
-        <hr>
-        <p>
-            Hello, my name is <b><i>Roman Fernando Martinez</i></b>.
-        </p>
-        <p>
-            I recently graduated with honors from <b><i>The University of Texas at San Antonio</i></b>, where I obtained my bachelor's in <b><i>computer science.</i></b> with a concentration in   <b><i>software engineering.</i></b>   
-        </p>
-    
-        <p> 
-             My passions lie in creating engaging websites for the public use, utilizing tools such as <b><i>JavaScript</i></b>, <b><i>HTML</i></b>, <b><i>CSS</i></b>, and<b><i> React</i>,</b> as well as <b><i>Node.js</i></b>. Additionally, I have experience with <b><i>Unity</i></b>, <b><i>C</i></b>, <b><i>Python</i></b>, and more.
-        </p>
+        <div class="content">
 
-        <p>
-            I want to thrive in turning
-            creative ideas into functional websites and applications. I am excited to bring my skills and
-            enthusiasm to new projects and continuously learn and grow in the ever-evolving field of web development.
-        </p>
-        <p>
-            Moving forward, I  want this portfolio to host my projects, as well as my personal notes and original design layouts to document my growth.
-        </p>
+            <h1>About Me</h1>
+            <hr>
+            <p>
+                Hello, my name is <b><i>Roman Fernando Martinez</i></b>.
+            </p>
+            <p>
+                I recently graduated with honors from <b><i>The University of Texas at San Antonio</i></b>, where I
+                obtained my bachelor's in <b><i>computer science.</i></b> with a concentration in <b><i>software
+                        engineering.</i></b>
+            </p>
 
+            <p>
+                My passions lie in creating engaging websites for the public use, utilizing tools such as
+                <b><i>JavaScript</i></b>, <b><i>HTML</i></b>, <b><i>CSS</i></b>, and<b><i> React</i>,</b> as well as
+                <b><i>Node.js</i></b>. Additionally, I have experience with <b><i>Unity</i></b>, <b><i>C</i></b>,
+                <b><i>Python</i></b>, and more.
+            </p>
+
+            <p>
+                I want to thrive in turning
+                creative ideas into functional websites and applications. I am excited to bring my skills and
+                enthusiasm to new projects and continuously learn and grow in the ever-evolving field of web
+                development.
+            </p>
+            <p>
+                Moving forward, I want this portfolio to host my projects, as well as my personal notes and original
+                design layouts to document my growth.
+            </p>
+
+        </div>
     </div>
 
     <div class="projects" id="projects">
-
-        <ul>
+        <div class="content">
             <h1>Projects</h1>
-            <hr>
-            <li><a href="https://romanmartinez.itch.io/the-legend-of-patrick">The Legend Of Patrick</a><span>Jun. 2023 - Aug. 2023</span>
-                <p>I am the sole developer of a game demo titled "The Legend of Patrick", a 2D platformer inspired by modern classics such as <i>Super Meat Boy</i> and<i> Celeste</i> . The game incorporates abilities reminiscent of those in <i>The Legend of Zelda: Tears of the Kingdom</i>. Built using Unity, this project marks my first foray into game design, where I took on roles in art direction, sound design, game music composition, and more. The game was recently published and is available to play online. 
-                </p>
-            </li>
-            
-        </ul>
+            <ul>
+                <hr>
+                <li>
+                    <div style=" display: flex; justify-content: space-between; flex-wrap: wrap; gap: 5px"><a
+                            style="min-width: 500px;"
+                            href="https://github.com/WebTechGroup13/Ephemere">Ephemere</a><span
+                            style="margin-block: auto;">Nov. 2023 - Nov. 2023</span></div>
+                    <p>Designer and backend contributor to "Ephemere," a social platform that allows users to send
+                        publicly viewable letters to others anonymously, which disappear after 24 hours. This was the
+                        first project where I utilized ReactJS for the user interface, Node.js with Express.js for
+                        handling server-side logic, and MongoDB.</p>
+                </li>
+                <li>
+                    <div style=" display: flex; justify-content: space-between; flex-wrap: wrap; gap: 5px"><a
+                            style="min-width: 500px;" href="https://romanmartinez.itch.io/the-legend-of-patrick">The
+                            Legend Of Patrick</a><span style="margin-block: auto;">Jun. 2023 - Aug. 2023</span></div>
+                    <p>Sole developer of a game demo titled "The Legend of Patrick", a 2D platformer inspired by modern
+                        classics such as <i>Super Meat Boy</i> and<i> Celeste</i> . The game incorporates abilities
+                        reminiscent of those in <i>The Legend of Zelda: Tears of the Kingdom</i>. Built using Unity,
+                        this project marks my first foray into game design, where I took on roles in art direction,
+                        sound design, game music composition, and more. The game was recently published and is available
+                        to play online.</p>
+                </li>
+            </ul>
+        </div>
     </div>
-
 
     <div class="vault" id="vault">
-        
-        <h1>Vault</h1>
-        <hr>
-        <div class="column">
-        <ul>
-            
-            <h2>Notes:</h2>
-            <li><a href="notes.html?noteid=2PACX-1vQaNjHim4nJu9gLRHEAVUk8d_tv0JzBOOA6Z6dVSeNaIWBTpkUIgYyXQmXpqk0Q_oiMfG8pbaplOu3Q">Intro To JavaScript</a></li>
-            <li><a href="notes.html?noteid=2PACX-1vSbDwiLDVPEh9vlZ4j_p-U3WHJ1LbJ5JypjBqUR-T7AAkOt-0gBlKo8pSTBwpbQt4mbzXdwg7zZiUvG">JS Fundamentals</a></li>
-            <li><a href="notes.html?noteid=2PACX-1vTlz1R4N7TILfnW9lOOJg7ze_vsS9s2C6G0zq2jH4vsYWFlILpZv8i7UJONSQzs8RvG9HhiyUTIf-dM">HTML & CSS</a></li>
-            <li><a href="notes.html?noteid=2PACX-1vRAbnZuZF6g--GhjPi5c4cLX1onis9EHqrDPxiUbOqmC5SZD_9xK2Enk-xSi8v1pRVOyj-v_i0kh_tE">Git & Github</a></li>
-        </ul>
+        <div class="content">
+            <h1>Vault</h1>
+            <hr>
+            <div style="display: flex; flex-wrap: wrap; gap: 5px; ">
+                <div style="flex: 1; min-width: 200px;">
+                    <h2>Notes:</h2>
+                    <ul>
+                        <li><a
+                                href="notes.html?noteid=2PACX-1vQaNjHim4nJu9gLRHEAVUk8d_tv0JzBOOA6Z6dVSeNaIWBTpkUIgYyXQmXpqk0Q_oiMfG8pbaplOu3Q">Intro
+                                To JavaScript</a></li>
+                        <li><a
+                                href="notes.html?noteid=2PACX-1vSbDwiLDVPEh9vlZ4j_p-U3WHJ1LbJ5JypjBqUR-T7AAkOt-0gBlKo8pSTBwpbQt4mbzXdwg7zZiUvG">JS
+                                Fundamentals</a></li>
+                        <li><a
+                                href="notes.html?noteid=2PACX-1vTlz1R4N7TILfnW9lOOJg7ze_vsS9s2C6G0zq2jH4vsYWFlILpZv8i7UJONSQzs8RvG9HhiyUTIf-dM">HTML
+                                & CSS</a></li>
+                        <li><a
+                                href="notes.html?noteid=2PACX-1vRAbnZuZF6g--GhjPi5c4cLX1onis9EHqrDPxiUbOqmC5SZD_9xK2Enk-xSi8v1pRVOyj-v_i0kh_tE">Git
+                                & Github</a></li>
+                    </ul>
+                </div>
+                <div style="flex: 1; min-width: 200px;">
+                    <h2>Designs:</h2>
+                    <ul>
+                        <li><a
+                                href="design.html?designid=2PACX-1vQcQYKsqzLcOeKM2ggLuRaZWQlStLUXI0uC7gKpky-G3xeRx0sI8SF_P2GtfiozLbzo_gIQGks_lkBt">Roman's
+                                Portfolio</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        
-        <div class="column">
-        <h2>Designs:</h2>
-        <ul>
-            <li><a href="design.html?designid=2PACX-1vQcQYKsqzLcOeKM2ggLuRaZWQlStLUXI0uC7gKpky-G3xeRx0sI8SF_P2GtfiozLbzo_gIQGks_lkBt">Roman's Portfolio</a></li>
-            
-        </ul>
     </div>
 
-    </div>
-    
+
+
     <div id="noise"></div>
     <div id="crt"></div>
     <div class="secret"><span>Take care of yourself.</span></div>
 
     <script>
-    
+
     </script>
 
 </body>
